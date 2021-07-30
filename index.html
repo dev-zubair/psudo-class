@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psudo Class</title>
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+    <style>
+        .container{
+            text-align: center;
+        }
+        h2::before{
+            content: 'Almighty ';
+            font-size: 50px;
+            color: brown;
+        }
+        h2::after{
+            content: 'Universe';
+            font-size: 50px;
+            color: coral;
+        }
+        /* QURAN SECTION  */
+        .title-section{
+            display: inline-block;
+        }
+        .title-section h3{
+            text-align: center;
+        }
+        .title-section::after, .title-section::before{
+            content: '';
+            display: block;
+            height: 2px;
+            width: 100%;
+            background-color: crimson;
+        }
+        /* HADITH SECTION  */
+        .hadith-section{
+            display: inline-block;
+            cursor: pointer;
+        }
+        .hadith-section::after, 
+        .hadith-section:hover::before{
+            content: '';
+            display: block;
+            height: 2px;
+            width: 100%;
+            background-color: crimson;
+        }
+        /* QUATATION SECTION  */
+        blockquote::before{
+            content: open-quote;
+            font-size: 30px;
+            color: crimson;
+        }
+        blockquote::after{
+            content: close-quote;
+            font-size: 30px;
+            color: crimson;
+        }
+        .required:after {
+            content:" *";
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <section class="container text-center">
+        <h1 class="text-center p-5">PSUDO CLASS</h1>
+        <h2>Allah is the only creator in the </h2>
+    </section>
+
+    <section class="container mt-5">
+            <h3 class="title-section">Quran & Hadith Quotes</h3>
+            <blockquote>Allah Almighty says in the Noble Quran: O you who believe! Respond to (the call of) Allah and His Messenger when he calls you to that which gives you life. - Quran, 8:24</blockquote>
+    </section>
+    <section class="container mt-5">
+            <h3 class="hadith-section">Hadith Quotes</h3>
+            <blockquote>Prophet (PBUH) said in Hadith: Whoever supplicates Allah to exalt for me, Allah would exalt him ten times.(Muslim)</blockquote>
+            <p class="required">Full Name: <input type="text" placeholder="Your Name"></p>
+            <p class="required">Email Address: <input type="email" placeholder="Your Email Address"></p>
+            <p class="required">Phone Number: <input type="tel" placeholder="Your Phone No"></p>
+            <p>Message: <textarea name="message" style="width:200px; height:100px;"></textarea></p>
+            <input type="submit" value="SEND MESSAGE">
+    </section>
+    
+</body>
+</html>
