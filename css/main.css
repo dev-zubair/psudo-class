@@ -1,0 +1,55 @@
+.container{
+    text-align: center;
+}
+h2::before{
+    content: 'Almighty ';
+    font-size: 50px;
+    color: brown;
+}
+h2::after{
+    content: 'Universe';
+    font-size: 50px;
+    color: coral;
+}
+/* QURAN SECTION  */
+.title-section{
+    display: inline-block;
+}
+.title-section h3{
+    text-align: center;
+}
+.title-section::after, .title-section::before{
+    content: '';
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: crimson;
+}
+/* HADITH SECTION  */
+.hadith-section{
+    display: inline-block;
+    cursor: pointer;
+}
+.hadith-section::after, 
+.hadith-section:hover::before{
+    content: '';
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: crimson;
+}
+/* QUATATION SECTION  */
+blockquote::before{
+    content: open-quote;
+    font-size: 30px;
+    color: crimson;
+}
+blockquote::after{
+    content: close-quote;
+    font-size: 30px;
+    color: crimson;
+}
+.required:after {
+    content:" *";
+    color: red;
+}
